@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Animal : MonoBehaviour {
+public abstract class Animal : MonoBehaviour {
 
 
-    public virtual void SayHello()
-    {
-        Debug.Log("Deep1");
-    }
+    public abstract void SayHello();
 
     public virtual void EatMeat()
     {

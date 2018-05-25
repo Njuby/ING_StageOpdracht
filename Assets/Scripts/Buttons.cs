@@ -13,7 +13,7 @@ public class Buttons : MonoBehaviour {
 
     public InputField nameField;
 
-    public string inputName;
+    private string inputName;
 
     private void Start()
     {
@@ -29,9 +29,11 @@ public class Buttons : MonoBehaviour {
 
     private void OnClickHello()
     {
+        Debug.Log("click");
         foreach(Animal a in animals)
         {
             a.SayHello();
+            Debug.Log("+1");
         }
     }
 
