@@ -19,7 +19,10 @@ namespace Zoo
             Tiger wally = Instantiate(tiger, transform).GetComponent<Tiger>();
             wally.name = "wally";
             Zebra marty = Instantiate(zebra, transform).GetComponent<Zebra>();
-            marty.name = "marty";            
+            marty.name = "marty";  
+            
+            
         }
     }
+
 }
