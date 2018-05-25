@@ -2,20 +2,20 @@
 using UnityEngine.UI;
 
 
-public class Lion : MeatEaters {
+public class Lion : Animal {
     public string name;
     [SerializeField]
     private GameObject Balloon;
     [SerializeField]
     private Text text;
 
-    protected override void SayHello()
+    public override void SayHello()
     {
         Balloon.SetActive(true);
         text.text = "roooaoaaaaar";
     }
 
-    protected override void EatMeat()
+    public override void EatMeat()
     {
         Balloon.SetActive(true);
         text.text = "nomnomnom thx mate";

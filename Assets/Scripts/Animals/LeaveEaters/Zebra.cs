@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 
-public class Zebra : LeaveEaters {
+public class Zebra : Animal {
     [SerializeField]
     private GameObject Balloon;
     [SerializeField]
@@ -10,13 +10,13 @@ public class Zebra : LeaveEaters {
     public string name;
 
 
-    protected override void SayHello()
+    public override void SayHello()
     {
         Balloon.SetActive(true);
         text.text = "zebra zebra";
     }
 
-    protected override void EatLeaves()
+    public override void EatLeaves()
     {
         Balloon.SetActive(true);
         text.text = "munch munch zank yee bra";

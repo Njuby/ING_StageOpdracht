@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MeatEaters : Animal {
 
-    protected override void SayHello()
+    public override void SayHello()
     {
-        throw new System.NotImplementedException();
+        
+        Debug.Log("Deep2");
     }
 }

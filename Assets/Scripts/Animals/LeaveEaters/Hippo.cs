@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Hippo : LeaveEaters {
+
+public class Hippo : Animal {
 
     public string name;
     [SerializeField]
@@ -9,13 +10,13 @@ public class Hippo : LeaveEaters {
     [SerializeField]
     private Text text;
 
-    protected override void SayHello()
+    public override void SayHello()
     {
         Balloon.SetActive(true);
         text.text = "splash";
     }
 
-    protected override void EatLeaves()
+    public override void EatLeaves()
     {
         Balloon.SetActive(true);
         text.text = "munch munch lovely";

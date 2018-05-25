@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 
-public class Tiger : MeatEaters {
+public class Tiger : Animal {
     public string name;
     [SerializeField]
     private GameObject Balloon;
@@ -10,19 +10,19 @@ public class Tiger : MeatEaters {
     private Text text;
 
 
-    protected override void SayHello()
+    public override void SayHello()
     {
         Balloon.SetActive(true);
         text.text = "rraaarww";
     }
 
-    protected override void EatMeat()
+    public override void EatMeat()
     {
         Balloon.SetActive(true);
         text.text = "nomnomnom thx wubalubadubdub";
     }
 
-    protected override void PerformTrick()
+    public override void PerformTrick()
     {
         StartCoroutine(DoTrick());
     }

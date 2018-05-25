@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class Animal : MonoBehaviour {
+public class Animal : MonoBehaviour {
 
-    private void Start()
+
+    public virtual void SayHello()
     {
-        
+        Debug.Log("Deep1");
     }
 
-    protected abstract void SayHello();
-
-    protected virtual void EatMeat()
-    {
-
-    }
-
-    protected virtual void EatLeaves()
+    public virtual void EatMeat()
     {
 
     }
 
-    protected virtual void PerformTrick()
+    public virtual void EatLeaves()
     {
 
     }
 
-    protected IEnumerator DoTrick()
+    public virtual void PerformTrick()
+    {
+
+    }
+
+    public IEnumerator DoTrick()
     {
         for (int i = 0; i < 360; i++)
         {
