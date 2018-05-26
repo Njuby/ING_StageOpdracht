@@ -8,7 +8,7 @@ namespace Zoo
     {
         [SerializeField]
         private GameObject lion, hippo, pig, tiger, zebra;
-        private void Start()
+        private void Awake()
         {
             Lion henk = Instantiate(lion, transform).GetComponent<Lion>();
             //henk.name = "henk";

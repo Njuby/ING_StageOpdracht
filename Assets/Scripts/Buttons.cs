@@ -15,6 +15,7 @@ public class Buttons : MonoBehaviour {
 
     private string inputName;
 
+    //get all buttons to work
     private void Start()
     {
         giveLeaves = giveLeaves.GetComponent<Button>();
@@ -25,6 +26,15 @@ public class Buttons : MonoBehaviour {
         doTricks.onClick.AddListener(OnClickTricks);
         sayHello = sayHello.GetComponent<Button>();
         sayHello.onClick.AddListener(OnClickHello);
+        animals = FindObjectsOfType<Animal>();
+
+    }
+
+    private void Update()
+    {
+        inputName = nameField.text;
+        Debug.Log(inputName);
+        
     }
 
     private void OnClickHello()
@@ -33,7 +43,6 @@ public class Buttons : MonoBehaviour {
         foreach(Animal a in animals)
         {
             a.SayHello();
-            Debug.Log("+1");
         }
     }
 
@@ -41,7 +50,7 @@ public class Buttons : MonoBehaviour {
     {
         foreach (Animal a in animals)
         {
-            a.DoTrick();
+            a.PerformTrick();
         }
     }
 
@@ -61,10 +70,6 @@ public class Buttons : MonoBehaviour {
         }
     }
 
-    private void Update()
-    {
-        inputName = nameField.text;
-        Debug.Log(inputName);
-    }
+   
 
 }

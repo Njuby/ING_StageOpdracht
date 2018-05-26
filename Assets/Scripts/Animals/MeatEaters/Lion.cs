@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using Zoo;
 
 public class Lion : Animal {
     public string name;

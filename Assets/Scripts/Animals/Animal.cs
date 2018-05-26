@@ -1,35 +1,41 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Zoo;
 
 
-public abstract class Animal : MonoBehaviour {
-
-
-    public abstract void SayHello();
-
-    public virtual void EatMeat()
+    public abstract class Animal : MonoBehaviour
     {
 
-    }
+        
 
-    public virtual void EatLeaves()
-    {
 
-    }
+        //Each animal MUST have a message to say
+        public abstract void SayHello();
 
-    public virtual void PerformTrick()
-    {
-
-    }
-
-    public IEnumerator DoTrick()
-    {
-        for (int i = 0; i < 360; i++)
+        //Each of the following is optional and does NOTHING by DEFAULT
+        public virtual void EatMeat()
         {
-            transform.localRotation = Quaternion.Euler(i, 0, 0);
-            yield return new WaitForEndOfFrame();
+
+        }
+
+        public virtual void EatLeaves()
+        {
+
+        }
+
+        public virtual void PerformTrick()
+        {
+
+        }
+
+        //Basic Trick. Can be overwritten
+        public virtual IEnumerator DoTrick()
+        {
+            for (int i = 0; i < 360; i++)
+            {
+                transform.localRotation = Quaternion.Euler(i, 0, 0);
+                yield return new WaitForEndOfFrame();
+            }
         }
     }
 
-}

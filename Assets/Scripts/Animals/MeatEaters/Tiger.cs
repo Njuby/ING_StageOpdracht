@@ -13,7 +13,7 @@ public class Tiger : Animal {
     public override void SayHello()
     {
         Balloon.SetActive(true);
-        text.text = "rraaarww";
+        text.text = ("rraaarww" + name);
     }
 
     public override void EatMeat()
