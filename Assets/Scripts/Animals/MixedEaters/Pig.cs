@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 public class Pig : Animal{
-    public string name;
+    //public string name;
     [SerializeField]
     private GameObject Balloon;
     [SerializeField]

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Hippo : Animal {
 
-    public string name;
+    //public string name;
     [SerializeField]
     private GameObject Balloon;
     [SerializeField]

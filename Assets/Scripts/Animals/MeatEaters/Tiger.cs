@@ -3,12 +3,13 @@ using UnityEngine.UI;
 
 
 public class Tiger : Animal {
-    public string name;
+    //public string name;
     [SerializeField]
     private GameObject Balloon;
     [SerializeField]
     private Text text;
 
+    
 
     public override void SayHello()
     {

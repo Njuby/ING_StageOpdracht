@@ -7,7 +7,7 @@ public class Zebra : Animal {
     private GameObject Balloon;
     [SerializeField]
     private Text text;
-    public string name;
+    //public string name;
 
 
     public override void SayHello()

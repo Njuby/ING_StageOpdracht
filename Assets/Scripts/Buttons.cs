@@ -15,9 +15,10 @@ public class Buttons : MonoBehaviour {
 
     private string inputName;
 
-    //get all buttons to work
+    
     private void Start()
     {
+        //get all buttons to work
         giveLeaves = giveLeaves.GetComponent<Button>();
         giveLeaves.onClick.AddListener(OnClickLeaves);
         giveMeat = giveMeat.GetComponent<Button>();
@@ -26,12 +27,19 @@ public class Buttons : MonoBehaviour {
         doTricks.onClick.AddListener(OnClickTricks);
         sayHello = sayHello.GetComponent<Button>();
         sayHello.onClick.AddListener(OnClickHello);
-        animals = FindObjectsOfType<Animal>();
 
+        //get all animals
+        animals = FindObjectsOfType<Animal>();
+        //check if names work
+        //foreach(Animal a in animals)
+        //{
+        //    Debug.Log(a.name);
+        //}
     }
 
     private void Update()
     {
+        //get textfield input
         inputName = nameField.text;
         Debug.Log(inputName);
         
@@ -39,10 +47,19 @@ public class Buttons : MonoBehaviour {
 
     private void OnClickHello()
     {
-        Debug.Log("click");
-        foreach(Animal a in animals)
+        //Debug.Log("button works");
+        foreach (Animal a in animals)
         {
-            a.SayHello();
+            if (a.name.Equals(inputName))
+            {
+                a.SayHello();
+                //if we dont return here then the animal with the correct name will say hello BUT all others will do too
+                return;
+            }
+            else
+            {
+                a.SayHello();
+            }
         }
     }
 

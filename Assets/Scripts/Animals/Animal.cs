@@ -6,8 +6,7 @@ using Zoo;
     public abstract class Animal : MonoBehaviour
     {
 
-        
-
+    public string name;
 
         //Each animal MUST have a message to say
         public abstract void SayHello();
