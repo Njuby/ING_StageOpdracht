@@ -3,7 +3,10 @@ using UnityEngine.UI;
 using Zoo;
 
 public class Lion : Animal {
-    //public string name;
+   
+    //Texts Message can be given in Spanwer.cs 
+    //-when creating an animal.
+
     
     [SerializeField]
     private GameObject Balloon;
@@ -13,13 +16,16 @@ public class Lion : Animal {
     public override void SayHello()
     {
         Balloon.SetActive(true);
-        text.text = "roooaoaaaaar";
+        //Texts Message can be given in Spanwer.cs 
+        //-when creating an animal.
+        //or code them here using: ""
+        text.text = helloMessage;
     }
 
     public override void EatMeat()
     {
         Balloon.SetActive(true);
-        text.text = "nomnomnom thx mate";
+        text.text = feedMeatMessage;
     }
 }
 

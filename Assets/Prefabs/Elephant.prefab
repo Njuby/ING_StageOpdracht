@@ -139,6 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
+  helloMessage: 
+  feedMeatMessage: 
   Balloon: {fileID: 1193059799009368}
   text: {fileID: 114124845580400040}
 --- !u!114 &114632774321182662
