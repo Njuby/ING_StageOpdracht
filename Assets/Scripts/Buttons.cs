@@ -15,6 +15,7 @@ public class Buttons : MonoBehaviour {
 
     private string inputName;
 
+
     
     private void Start()
     {
@@ -31,10 +32,10 @@ public class Buttons : MonoBehaviour {
         //get all animals
         animals = FindObjectsOfType<Animal>();
         //check if names work
-        //foreach(Animal a in animals)
-        //{
-        //    Debug.Log(a.name);
-        //}
+        foreach (Animal a in animals)
+        {
+            Debug.Log(a.name);
+        }
     }
 
     private void Update()
@@ -52,11 +53,12 @@ public class Buttons : MonoBehaviour {
         {
             if (a.name.Equals(inputName))
             {
+                Debug.Log(a.name + "      " + inputName);
                 a.SayHello();
-                //if we dont return here then the animal with the correct name will say hello BUT all others will do too
-                return;
+               
+                break;
             }
-            else
+            if (inputName.Equals(string.Empty))
             {
                 a.SayHello();
             }
