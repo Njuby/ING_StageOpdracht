@@ -12,5 +12,5 @@ Wat moet er allemaal kunnen:
 - als er wel een naam is ingevuld zegtalleen dat dier hallo (de andere knoppen doen het nog wel voor alle dieren).
 
 
-Bekijk je deze opdracht? Navigaar naar Spawner.cs | Animal.cs | Lion.cs | Hippo.cs 
+Bekijk je deze opdracht? Navigaar naar Spawner.cs | Animal.cs | Lion.cs | Hippo.cs | Button.cs
 om te zien wat ik heb aangepast.
